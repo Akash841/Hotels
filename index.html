@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b8a58bc95c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/logo.jpeg" alt="logo image">
+                </a>
+                <ul class="nav-menu">
+                    <li> <a href="#home" class="nav-list">Home</a> </li>
+                    <li> <a href="#about" class="nav-list">About</a> </li>
+                    <li> <a href="#services" class="nav-list">Services</a> </li>
+                    <li> <a href="#rooms" class="nav-list">Rooms</a> </li>
+                    <li> <a href="#gallary" class="nav-list">Gallary</a> </li>
+                    <li> <a href="#contact" class="nav-list">Contact</a></li>
+
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+        
+    </header>
+
+    
+        
+            <label class="location-label"></label>
+            <input type="text" class="location" placeholder="City, state, location, or airport" required>
+
+            <button type="submit" class="btn date" onclick="dateOpenPopup()">Date</button>
+            <div class="date-popup" id="date-popup">
+                <h2>Select Date</h2>
+                <input type="text" id="datepicker">
+                <button type="button" onclick="dateClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn room" onclick="roomOpenPopup()">Rooms & Guests</button>
+            <div class="room-popup" id="room-popup">
+                <h2>Rooms and Guests</h2>
+                <div class="container-room">
+                <form>
+                    <label for="rooms">Rooms:</label>
+                    <input type="number" id="rooms" value=1><br><br>
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" value=1><br><br>
+                    <label for="kids">Kids:</label>
+                    <input type="number" id="kids" value=0><br><br>
+                </form>
+                <button type="button" onclick="roomClosePopup()">OK</button>
+
+            </div>
+            </div>
+            <button type="submit" class="btn special-rates" onclick="ratesOpenPopup()">Special Rates</button>
+            <div class="rates-popup" id="rates-popup">
+                <h2>Special Rates</h2>
+                <form class="special-rates-checkbox">
+                    <label class="special-rates-checkbox">Use Points
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Travel Agents
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">AAA Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">AARP Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Senior Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Government / Military Rates
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </form>
+                    <form class="special-rates-text">
+
+                        <label for="promotion-code">Promotion Code</label><br>
+                        <input type="text" id="promotion-code"><br><br>
+                        <label for="group-code">Group Code</label><br>
+                        <input type="text" id="group-code"><br><br>
+                        <label for="corporate-account">Corporate Account</label><br>
+                        <input type="text" id="corporate-account"><br><br>
+
+                    </form>
+                    
+                
+                <button type="button" onclick="ratesClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn find-hotels">Find a Hotel</button>
+        
+    </div>
+
+    <div class="hotel-front-container">
+        <img src="header.jpg" alt="picture of the front of the hotel" class="hotel-front">
+       </div>
+
+       <div class="welcome-text">
+        <h2>Kingsukh Guest House</h2>
+        <p>Make Yourself At Home In Our Guest House.</p>
+        <button class="btn">Explore More</button>
+       </div>
+
+       <div class="subheading">
+        <h2>The Most Memorable Rest Time Starts Here.</h2>
+        <p>Here is a journey through some of the most wonderful places.</p>
+       </div>
+
+       <div class="destinations-images">
+    
+        <div class="country" id="italy-div">
+            <img src="header (1).jpg" alt="comfort sitting area" >
+            <div class="country-text" id="italy-text">Comfort Sitting Area</div>
+        </div> 
+        <div class="country" id="portugal-div">
+            <img src="room1.jpg" alt="nice room" >
+            <div class="country-text" id="portugal-text">Nice Rooms</div>
+        </div>
+        <div class="country" id="japan-div">
+            <img src="small.jpg" alt="cozy haven room" >
+            <div class="country-text" id="japan-text">Cozy Heaven Room</div>
+        </div>
+        <div class="country" id="egypt-div">
+            <img src="large.jpg" alt="spacious serenity suite" >
+            <div class="country-text" id="egypt-text">Spacious Serenity Suite</div>
+        </div>
+       </div>
+       
+       <div class="subheading">
+        <h2>Gallary</h2>
+        <p></p>
+       </div>
+
+       <div class="experience-images">
+        <div class="experience" id="discount-div">
+            <img src="ayodhya.webp" alt="discount picture" >
+            <div class="experience-text" id="discount-text"></div>
+        </div>
+        <div class="experience" id="points-div">
+            <img src="baranti.webp" alt="points picture" >
+            <div class="experience-text" id="points-text"></div>
+        </div>
+        <div class="experience" id="parking-div">
+            <img src="mithonDam.webp" alt="parking picture" >
+            <div class="experience-text" id="parking-text"></div>
+        </div>
+        <div class="experience" id="plan-div">
+            <img src="1.jpg" alt="plan picture" >
+            <div class="experience-text" id="plan-text"></div>
+        </div>
+        <div class="experience" id="first-time-div">
+            <img src="flower.jpg" alt="first-time picture" >
+            <div class="experience-text" id="first-time-text"></div>
+        </div>
+        <div class="experience" id="members-div">
+            <img src="palash.webp" alt="members picture" >
+            <div class="experience-text" id="members-text"></div>
+        </div>
+       </div>
+
+       <div class="different-hotels">
+        <img src="out.jpg" alt="hotel front">
+        <div class="different-hotels-div">
+        <h2>About us</h2>
+        <p>The Best Holidays Start Here!. </p>
+           <p> Embark on a tranquil journey at our Kingsukh Guest House, enveloped by the scenic allure of Biharinath Hill, Baranti Hill, Susunia Hill, Joychandi Hill, Garhpanchkot, Baranti Dam, Maithon Dam, and the captivating Panchat Dam. Revel in the embrace of comfort, relish delightful meals
+            , and unwind in our verdant garden oasis. Your ideal retreat beckons, promising a harmonious blend of nature's beauty and heartfelt hospitality. Explore the hidden gems of Purulia, creating memories that linger long after your stay.</p>
+        
+    </div>
+    </div>
+
+    <div class="back-to-top">
+    <button onclick="topFunction()" class="btn"> ⬆ Back to Top</button>
+    </div>  
+   
+  <hr class="footer-line">
+
+    <div class="footer">
+        <div class="col-1">
+            <div>
+            <h2>KingSukh Guest House</h2>
+            <button class="btn">Book Now</button> 
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            
+            </div>
+            
+        </div>
+        </div>
+        <div class="col-2">
+            <a href="#"><h2><b>OUR SERVICES</b></h2></a>
+            <a href="#">Concierge Assistance</a>
+            <a href="#">Flexible Booking Options</a>
+            <a href="#">Airport Transfers</a>
+            <a href="#">Wellness & Recreation</a>
+            
+        </div>
+        <div class="col-3">
+            <a href="#"><h2>CONTACT US</h2></a>
+            <a href="#">Address: Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</a>
+            <a href="#">kkghosh0099@gmail.com</a>
+            <a href="#">+91 9007062180</a>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+    </html>
